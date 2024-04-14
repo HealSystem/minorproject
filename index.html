@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HealSys</title>
+</head>
+<body>
+
+    <div class="top-taskbar">
+        <div class="welcome">
+            <h2>Welcome to HealSys</h2>
+            <p>"Your Health, Our Priority"</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="HealSys Logo">
+             <center> <h1>
+                <b>H</b>
+                <b>e</b>
+                <b>a</b>
+                <b>l</b>
+                <b>S</b>
+                <b>y</b>
+                <b>s</b>
+            </h1>
+            </center>
+        </div>
+    </header>
+
+    <div class="bg-img">
+        <form action="/action_page.php" class="container">
+            <h1>Login</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+    
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button><br>
+
+            <center><label>Don't have an account?<a href="patient_r.php">Sign-in</a></label></center>
+        </form>
+        </div>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-wrapper">
+            <div class="service" id="patient-registration">
+                <a href="patient_r.php">
+                <img src="register.jpg" alt="Patient Registration">
+                <p>Patient Regestration</p>
+                </a>
+            </div>
+            <div class="service" id="appointment-scheduling">
+                <a href="Appoint.php">
+                <img src="appointment.jpg" alt="Appointment Scheduling">
+                <p>Appointment Scheduling</p>
+                </a>
+            </div>
+            <div class="service" id="lab-management">
+                <img src="lab.jpg" alt="Laboratory Management">
+                <p>Laboratory Management</p>
+            </div>
+            <div class="service" id="pharmacy-management">
+                <img src="pharmacy.jpg" alt="Pharmacy Management">
+                <p>Pharmacy Management</p>
+            </div>
+            <div class="service" id="report-analysis">
+                <img src="report.jpg" alt="Report and Analysis">
+                <p>Report and Analysis</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <!-- About Us Content Goes Here -->
+    </section>
+
+    <section id="contact">
+    
+        <div class="contact-form" style="display: flex; padding: 20px; text-align: left; background-color :#fff; color: black;">
+                <div style="flex: 1;">
+                    <h2>Get In Touch</h2>
+                    <form action="/contact_action.php" method="post" class="cont">
+                        <table>
+                            <tr>
+                                <td><label for="name">Name:</label></td>
+                                <td><input type="text" id="name" name="name"  required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">Email:</label></td>
+                                <td><input type="email" id="email" name="email" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="phone">Phone:</label></td>
+                                <td><input type="tel" id="phone" name="phone"  required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="subject">Subject:</label></td>
+                                <td><input type="text" id="subject" name="subject"  required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="message">Message:</label></td>
+                                <td><textarea id="message" name="message" rows="4" width="110%" required></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button type="submit" class="btn">Send Message</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+        
+                <div class="map-container">
+                    <!-- Update the following Google Maps embed code with accurate coordinates -->
+                    <iframe class="map-iframe" src="https://www.google.com/maps/embed?&q=your_latitude,your_longitude&z=15.429955,-75.016388" width="500" height="550" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        function submitPatientRegistration() {
+            // Handle patient registration logic
+            alert('Patient Registration Form Submitted');
+        }
+
+        document.getElementById('patient-registration').addEventListener('click', function () {
+            document.getElementById('patient-registration-form').style.display = 'block';
+        });
+    </script>
+
+    <footer class="footer">
+        <center>
+        <p>SDM College of Engineering & Technology, Dhavalgiri, 580002, Dharwad.</p>
+        <p>Phone : 9686077148</p>
+        <p>Email : healsys21@gmail.com</p>
+        <p>&copy; 2023 HealSys. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/your_instagram_account" target="_blank">Instagram</a>
+            <a href="https://twitter.com/your_twitter_account" target="_blank">Twitter</a>
+        </div>
+        </center>
+    </footer>
+
+</body>
+</html>
