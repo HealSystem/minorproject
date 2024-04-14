@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,8 +19,8 @@ body {
 }
 
 .welcome {
-    background-color: #4CAF50; /* Same color as the top taskbar */
-    padding: 10px;
+    background-color: #4CAF50;
+    padding: 10px 20px;
     text-align: center;
 }
 
@@ -35,7 +36,7 @@ body {
 }
 
 .top-taskbar nav li {
-    margin: 0 15px;
+    margin: 5px 0;
 }
 
 .top-taskbar nav a {
@@ -46,7 +47,7 @@ body {
 
 .header {
     background-color: #4CAF50;
-    padding: 15px;
+    padding: 10px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -54,11 +55,12 @@ body {
 }
 
 .logo img {
-    width: 75px;
-    height: 75px;
-    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
 }
 
+/* Services Section Styles */
 #services {
     text-align: center;
     padding: 50px;
@@ -72,9 +74,9 @@ body {
 }
 
 .service {
-    width: 150px;
-    height: 150px; /* Set a fixed size for the images */
-    margin: 15px;
+    width: calc(33.33% - 20px);
+    height: 150px;
+    margin: 15px 0;
     text-align: center;
     cursor: pointer;
 }
@@ -95,30 +97,28 @@ body {
     transform: scale(1.1);
 }
 
+/* Background Image Styles */
 .bg-img {
-    /* The image used */
     background-image: url("hos.jpeg");
-    min-height: 500px;
-
-    /* Center and scale the image nicely */
+    min-height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-/* Add styles to the form container */
+/* Login Form Styles */
 .container {
-    position: absolute;
-    right: 0;
-    margin: 20px;
-    max-width: 300px;
+    max-width: 100%;
+    margin: 0 10px;
     padding: 16px;
     background-color: white;
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password], input[type=email], input[type=tel]{
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -126,12 +126,14 @@ input[type=text], input[type=password], input[type=email], input[type=tel]{
     background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
     background-color: #ddd;
     outline: none;
 }
 
-/* Set a style for the submit button */
 .btn {
     background-color: #04AA6D;
     color: white;
@@ -146,6 +148,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
     opacity: 1;
 }
 
+/* Footer Styles */
 .footer {
     background-color: #4CAF50;
     padding: 15px;
@@ -164,68 +167,64 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
     text-decoration: underline;
 }
 
-/* Add this to your existing CSS file or create a new one */
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
+/* Media Queries for Responsiveness */
+/* For desktop screens */
+@media (min-width: 768px) {
+    .container {
+        max-width: 400px;
     }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.welcome {
-    animation: slideIn 1.5s ease-out;
-}
-/* Add this to your existing CSS file or create a new one */
-
-@keyframes fadeInLetters {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.logo h1 b {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeInLetters 0.8s ease-in-out forwards;
-}
-
-.logo h1 b:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.logo h1 b:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.logo h1 b:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-/* Add more nth-child rules if your word has more letters */
 
     .map-iframe {
-        width: 600px;
-        height: 450px;
-        border: none; /* Remove border if not needed */
-        border-radius: 10px; /* Add border-radius for rounded corners if desired */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box-shadow for a subtle effect */
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+    .top-taskbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
 
-.cont {
-    /* position: absolute; */
-    right: 0;
-    margin: 20px;
-    max-width: 300px;
-    padding: 16px;
-    background-color: lightblue;
+    .welcome {
+        padding: 10px 20px;
+    }
+
+    .top-taskbar nav ul {
+        margin-top: 10px;
+    }
+
+    .top-taskbar nav li {
+        margin: 5px 0;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+    }
+
+    .bg-img {
+        min-height: 300px;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .service {
+        width: calc(33.33% - 20px);
+    }
+
+    .map-iframe {
+        width: 100%;
+        height: 200px;
+    }
 }
